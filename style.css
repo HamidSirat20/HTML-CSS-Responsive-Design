@@ -1,0 +1,26 @@
+/* common code starts here */
+:root{
+    --orange-color:rgb(255,180,105);
+    --darkblue-color:rgb(16,47,228);
+    --purple-color:rgb(248,161,209);
+    --DarkOrchid-color:rgb(134,39,154);
+    --bgcolor:rgb(37,37,48);
+    --padding:0.5rem;
+    --border-radius:15px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/* common code ends here */
+

@@ -1,0 +1,48 @@
+@use 'variables' as var;
+@use 'mixin' as *;
+
+.header__nav__upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color:rgb(65, 65, 65);
+    height: 3rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    .btn{
+        @include btn;
+    }
+}
+.header__nav__upper li{
+    color: rgb(33, 141, 65);
+    font-size: larger;
+    padding: 1rem;
+}
+.header__nav__lower{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 6rem;
+    gap:2rem;
+    margin: 2rem 0;
+}
+.header__nav__lower> li{
+    padding: var.$padding;
+}
+li:hover{
+    text-decoration: overline;
+    color: blue;
+    a:hover{
+        font-size: 22px;
+    }
+   
+}
+
+.header__nav__lower a{
+    color:white;
+    font-size: 18px;
+}

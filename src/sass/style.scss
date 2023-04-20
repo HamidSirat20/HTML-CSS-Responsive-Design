@@ -1,0 +1,19 @@
+@use 'components/nav.scss';
+@use 'components/header.scss';
+@use 'components/variables.scss';
+@use 'components/body.scss';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(37,37,48);
+}

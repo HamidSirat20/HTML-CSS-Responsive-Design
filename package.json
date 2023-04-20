@@ -1,0 +1,12 @@
+{
+  "name": "fs15_2-responsive-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "sass ./src/sass/style.scss:style.css",
+    "compile:watch":"sass --watch ./src/sass/style.scss:style.css "
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,48 +1,91 @@
 @use 'variables' as var;
 @use 'mixin' as *;
 
-.header__nav__upper{
+.header__nav__upper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-    background-color:rgb(65, 65, 65);
+    background-color: rgb(65, 65, 65);
     height: 3rem;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
-    .btn{
+
+    .btn {
         @include btn;
     }
-}
-.header__nav__upper li{
-    color: rgb(33, 141, 65);
-    font-size: larger;
-    padding: 1rem;
-}
-.header__nav__lower{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    height: 6rem;
-    gap:2rem;
-    margin: 2rem 0;
-}
-.header__nav__lower> li{
-    padding: var.$padding;
-}
-li:hover{
-    text-decoration: overline;
-    color: blue;
-    a:hover{
-        font-size: 22px;
+
+    &.header__nav__upper li {
+        color: rgb(33, 141, 65);
+        font-size: larger;
+        padding: 1rem;
     }
-   
 }
 
-.header__nav__lower a{
-    color:white;
-    font-size: 18px;
+.header__nav__lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4rem;
+    gap: 2rem;
+
+    & img {
+        width: 6rem;
+        height: auto;
+    }
+
+    & .link--lists {
+        padding: var.$padding;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        &:nth-child(1) a::after{
+            content: "";
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            background-color: rgb(251, 171, 22);
+            position: absolute;
+        }
+        & li a {
+            color: var.$text-light;
+            font-family: 'Niconne', cursive;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        & li a:hover::after {
+            content: "";
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 50%;
+            background-color: rgb(238, 204, 141);
+            position: absolute;
+        }
+        & img {
+            width: 2rem;
+            height: auto;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width:1024px){
+    .header__nav__lower{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        & .link--lists{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+    }
+    
 }

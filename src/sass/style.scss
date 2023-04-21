@@ -1,7 +1,7 @@
 @use 'components/nav.scss';
-@use 'components/header.scss';
-@use 'components/variables.scss';
+@use 'components/main.scss';
 @use 'components/body.scss';
+@use 'components/variables' as var;
 
 *{
     box-sizing: border-box;
@@ -15,5 +15,17 @@ html{
 }
 
 body{
-    background-color: rgb(37,37,48);
+    background-color: rgb(70, 70, 76);
+    padding: 6rem;
+}
+i{
+
+    background-color: white;
+}
+button{
+    border-radius: var.$b-radius;
+    padding: 0 1rem;
+    background-color: rgb(218, 210, 210);
+    margin: 0.5rem 0 0 0.5rem;
+    cursor: pointer;
 }

@@ -7,136 +7,228 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Design</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <!-- Header Starts Here -->
-    <header class="header">
+    <header>
         <nav class="header__nav">
-            <ul class="header__nav__upper"> 
+            <ul class="header__nav__upper">
                 <li>Visit our market</li>
                 <li><button class="btn">Buy</button></li>
             </ul>
-            <ul class="header__nav__lower">
-                <li class="list">
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">Features</a>
-                </li>
-                <li>
-                    <a href="#">Style Guide</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <a href="#">Newsletter</a>
-                </li>
-                <li>
-                    <a href="#">Demos</a>
-                </li>
-                <li>
-                    <a href="#">Themes</a>
-                </li>
-            </ul>
+            <div class="header__nav__lower">
+                <div>
+                    <img src="../images/logo.svg" alt="">
+                </div>
+                <ul class="link--lists">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Features</a>
+                    </li>
+                    <li>
+                        <a href="#">Style Guide</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">Newsletter</a>
+                    </li>
+                    <li>
+                        <a href="#">Demos</a>
+                    </li>
+                    <li>
+                        <a href="#">Themes</a>
+                    </li>
+                    <li>
+                        <img src="../images/search.png" alt="search">
+                    </li>
+
+                </ul>
+            </div>
+
         </nav>
     </header>
     <!-- Header Ends Here -->
     <!-- Main Starts Here -->
-    <main class="main">
-        <section class="main__grid">
-            <div class="main__grid__img--1 >
-                <div class="image--overlay--1">
-                    <h6 class="author">by Hamid</h6>
-                    <p class="text">Find your comfort here!</p>
+    <main>
+        <section class="grid__container">
+            <article class="grid__container__card1">
+                <div class="btn">
+                    <button>Pinned</button>
                 </div>
-            </div>
-            <div class="main__grid__img--2 ">
-                <div class="image--overlay">
+                <div class="text">
                     <h6 class="author">by Hamid</h6>
-                    <p class="text">Whatever you are, be a good one!</p>
+                    <p class="priview">Find your comfort here!</p>
                 </div>
-            </div>
-            <div class="main__grid__img--3 ">
-                <div class="image--overlay">
-                    <h6 class="author">by Hamid</h6>
-                    <p class="text">Be yourself; everyone else is already taken!</p>
+            </article>
+            <article class="grid__container__card2">
+                <div class="overlay">
+                    <div class="btn">
+                        <button>Pinned</button>
+                    </div>
+                    <div class="text">
+                        <h6 class="author">by Hamid</h6>
+                        <p class="preview">Find your comfort here!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="main__grid__img--4 ">
-                <div class="image--overlay">
-                    <h6 class="author">by Hamid</h6>
-                    <p class="text">Limit your 'always' and your 'nevers!</p>
+            </article>
+            <article class="grid__container__card3">
+                <div class="overlay">
+                    <div class="btn">
+                        <button>Pinned</button>
+                    </div>
+                    <div class="text">
+                        <h6 class="author">by Hamid</h6>
+                        <p class="preview">Find your comfort here!3</p>
+                    </div>
                 </div>
-            </div>
-            <div class="main__grid__img--5 ">
-                <div class="image--overlay">
-                    <h6 class="author">by Hamid</h6>
-                    <p class="text">We need much less than we think we need!</p>
+            </article>
+            <article class="grid__container__card4">
+                <div class="overlay">
+                    <div class="btn">
+                        <button>Pinned</button>
+                    </div>
+                    <div class="text">
+                        <h6 class="author">by Hamid</h6>
+                        <p class="preview">Find your comfort here!4</p>
+                    </div>
                 </div>
-            </div>
-         </section>
-         <section class="part2">
+            </article>
+            <article class="grid__container__card5">
+                <div class="overlay">
+                    <div class="btn">
+                        <button>Pinned</button>
+                    </div>
+                    <div class="text">
+                        <h6 class="author">by Hamid</h6>
+                        <p class="preview">Find your comfort here!5</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="article">
+            <article class="article__container__1">
+                <div class="overlay">
+                    <div class="btn">
+                        <button>Open Space</button>
+                        <button>Case Study</button>
+                    </div>
+                    <div class="text">
+                        <p class="priview">The perfect place that helps you get work done in peace!</p>
+                        <h6 class="author">by Hamid</h6>
+                    </div>
+                </div>
+            </article>
+            <article class="article__container__2">
+                <div class="overlay">
+                    <div class="btn">
+                        <button>Furniture</button>
+                        <button>Productivity</button>
+                    </div>
+                    <div class="text">
+                        <p class="priview">I work best when my space is filled with inspiration!</p>
+                        <span>━━━</span>
+                        <p class="author">Haec et tu ita posuisti, et verba vestra sunt. Contemnit enim disserendi elegantiam, confuse loquitur. Bona autem corporis huic sunt, quod posterius posui, similiora.</p>
+                        <h6 class="author">by Hamid</h6>
+                    </div>
+                </div>
+            </article>
+            <article class="article__container__3">
+                <div class="overlay">
+                    <div class="btn">
+                        <button>Creative</button>
+                        <button>Open Space</button>
+                    </div>
+                    <div class="text">
+                        <p class="priview">Find your comfort here!</p>
+                        <h6 class="author">by Hamid</h6>
+                    </div>
+                </div>
+            </article>
+        </section>
+            <!-- 
+        <section class="part2">
             <div class="image--overlay--6">
                 <h6 class="author">by Hamid</h6>
-                <p class="text">Find your comfort here!</p> 
+                <p class="text">Find your comfort here!</p>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
-         </section>
-         <section class="part3">
+        </section>
+        <section class="part3">
             <div class="image--overlay--7">
                 <h6 class="author">by Hamid</h6>
-                <p class="text">We need much less than we think we need!We need much less than we think we need!</p> 
+                <p class="text">We need much less than we think we need!We need much less than we think we need!</p>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
-         </section>
-         <section class="part4">
+        </section>
+        <section class="part4">
             <div class="image--overlay--8">
                 <h6 class="author">by Hamid</h6>
-                <p class="text">Find your comfort here!</p> 
+                <p class="text">Find your comfort here!</p>
                 <i class="fa-solid fa-arrow-right"></i>
             </div>
-         </section>
-         <section class="part5">
-            <div class="main__grid__img--9" >
+        </section>
+        <section class="part5">
+            <div class="main__grid__img--9">
                 <div class="image--overlay">
                     <h6 class="author">by Hamid</h6>
                     <p class="text">Find your comfort here!</p>
                 </div>
             </div>
-            <div class="main__grid__img--10" >
+            <div class="main__grid__img--10">
                 <div class="image--overlay">
                     <h6 class="author">by Hamid</h6>
                     <p class="text">Find your comfort here!</p>
                 </div>
             </div>
-         </section>
-         <section class="part6">
-            <div class="main__grid__img--11" >
+        </section>
+        <section class="part6">
+            <div class="main__grid__img--11">
                 <div class="image--overlay">
-                    <h6 class="author">by Hamid</h6>
-                    <p class="text">Find your comfort here!</p>
+                    <div class="text-center">
+                        <h6 class="author">by Hamid</h6>
+                        <p style="display: inline;" class="text">Find your comfort here!</p>
+                        <i class="continue fa-solid fa-right-long fa-bounce fa-2xl"></i>
+                    </div>
                 </div>
             </div>
-            <div class="main__grid__img--12" >
+            <div class="main__grid__img--12">
                 <div class="image--overlay">
-                    <h6 class="author">by Hamid</h6>
-                    <p class="text">Find your comfort here!</p>
+                    <div class="text-center">
+                        <h6 class="author">by Hamid</h6>
+                        <p style="display: inline;" class="text">Find your comfort here!</p>
+                        <i class="continue fa-solid fa-right-long fa-bounce fa-2xl"></i>
+                    </div>
                 </div>
             </div>
-            <div class="main__grid__img--13" >
+            <div class="main__grid__img--13">
                 <div class="image--overlay">
-                    <h6 class="author">by Hamid</h6>
-                    <p class="text">Find your comfort here!</p>
+                    <div class="text-center">
+                        <h6 class="author">by Hamid</h6>
+                        <p style="display: inline;" class="text">Find your comfort here!</p>
+                        <i class="continue fa-solid fa-right-long fa-bounce fa-2xl"></i>
+                    </div>
                 </div>
             </div>
-         </section>
+        </section>
+        <div class="load">
+            <p>Load More...</p>
+        </div><br>
+        <section class="subscribe">
+            <div class="subscribe__title">
+                <p style="text-align: center;" class="subscribe__title__text author">Subscribe to see what we're
+                    thinking!</p>
+                <h1 style="text-align: center;" class="text">Starts your day with coding!</h1>
+            </div>
+        </section>
+ -->
 
-            
-        
-   
+
+
     </main>
     <!-- Main Ends Here -->
     <!-- Footer Starts Here -->

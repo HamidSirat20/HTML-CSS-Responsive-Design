@@ -1,118 +1,206 @@
 @use 'fonts' as *;
 @use 'variables' as var;
-@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@900&family=Niconne&family=Source+Sans+Pro:wght@900&display=swap');
 
-
-@mixin flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-@mixin btn{
-    
-        background-color: rgb(127, 167, 127);
-        padding: 0.2rem 2rem;
-        border-radius: 5px;
-        cursor: pointer;
-    
+@mixin txt-center($author, $text) {
+  .author {
+    font-size: $author;
   }
 
-@mixin pulseup{
-transform: translateY(-4px);  
+  .text {
+    font-size: $text;
+  }
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-@mixin overlay($col){
- .image--overlay{
-  background-color:$col;
-  border-radius:var.$b-radius;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin btn {
+
+  background-color: rgb(127, 167, 127);
+  padding: 0.2rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+@mixin pulseup {
+  transform: translateY(-4px);
+}
+
+@mixin overlay($col) {
+  .image--overlay {
+    background-color: $col;
+    border-radius: var.$b-radius;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+  }
+}
+
+@mixin bgc-overlay($col) {
+.overlay{
+  background-color: $col;
+  border-radius: var.$b-radius;
   width: 100%;
   height: 100%;
   opacity: 0.8;
- }
 }
-@mixin btn{
-    appearance: none;
-    background-color: white;
-    border: 2px solid #1A1A1A;
-    border-radius: 5px;
-    box-sizing: border-box;
-    color: #3B3B3B;
-    cursor: pointer;
-    display: inline-block;
-    font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 12px;
-    font-weight: 600;
-    line-height: normal;
-    margin: 0;
-    min-height: 35px;
-    min-width: 0;
-    outline: none;
-    padding-right:30px;
-    padding-left:30px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    width: 100%;
-    will-change: transform;
-  
-  
+}
+
+@mixin btn {
+  appearance: none;
+  background-color: white;
+  border: 2px solid #1A1A1A;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Corben', cursive;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 35px;
+  min-width: 0;
+  outline: none;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+
+
   &:disabled {
     pointer-events: none;
   }
-  
+
   &:hover {
     color: #fff;
     background-color: #2eba74;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
   }
-  
+
   &:active {
     box-shadow: none;
     transform: translateY(0);
   }
 
 }
-@mixin imagetext($font-size-1,$font-size-2){
-  .author{
-    position: absolute;
-    left: 40px;
-    bottom: 6rem;
+
+@mixin imagetext($font-size-1, $font-size-2) {
+  .author {
     font-size: $font-size-1;
-    color: white;
-    font-family: 'Niconne', cursive;
+    color: rgb(254, 254, 254);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
   }
-  .text{
-    position: absolute;
-    left: 40px;
-    bottom: 2rem;
+
+  p {
     font-size: $font-size-2;
-    color: white;
-    font-family: 'Niconne', cursive;
+    color: rgb(242, 237, 237);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+  }
+}
+@mixin font-text($font-size-1, $font-size-2) {
+  .author {
+    font-size: $font-size-1;
+    color: rgb(15, 14, 14);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: $font-size-2;
+    color: rgb(46, 43, 43);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
   }
 }
 
-@mixin imagetext-2($font-size-1,$font-size-2){
-  .author{
+@mixin imagetext-2($font-size-1, $font-size-2) {
+  .author {
     position: absolute;
     left: 25%;
     bottom: 50%;
     font-size: $font-size-1;
     color: rgb(28, 23, 23);
-    font-family: 'Niconne', cursive;
+    font-family: 'Corben', cursive;
   }
-  .text{
+
+  .text {
     position: absolute;
     left: 25%;
     bottom: 35%;
     font-size: $font-size-2;
     color: rgb(42, 26, 26);
-    font-family: 'Niconne', cursive;
+    font-family: 'Corben', cursive;
   }
 }
 
-@mixin zoomin{
-transform: scale(1.03);
+@mixin zoomin {
+  transform: scale(1.03);
+}
+
+@mixin typewriter {
+
+  /* DEMO-SPECIFIC STYLES */
+  .typewriter h1 {
+    color: #fff;
+    font-family: monospace;
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em;
+    /* Adjust as needed */
+    animation:
+      typing 3.5s steps(27, end),
+      blink-caret .5s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0
+    }
+
+    to {
+      width: 100%
+    }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+
+    from,
+    to {
+      border-color: transparent
+    }
+
+    50% {
+      border-color: orange
+    }
+  }
 }

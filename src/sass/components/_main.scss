@@ -1,0 +1,190 @@
+@use 'variables' as var;
+@use 'mixin' as *;
+@use 'fonts' as *;
+
+.grid__container {
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 10rem;
+    gap: 1rem;
+
+    & .grid__container__card1 {
+        background-image: url(images/2.jpg);
+        background-size: cover;
+        grid-row: span 2;
+        grid-column: span 2;
+        border-radius: var.$b-radius;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            @include pulseup;
+        }
+
+        & .text {
+            position: absolute;
+            bottom: 0rem;
+            padding: 2rem;
+            @include imagetext($medium, $largest);
+        }
+    }
+
+    & .grid__container__card2 {
+        background-image: url(images/1.jpg);
+        background-size: cover;
+        border-radius: var.$b-radius;
+        position: relative;
+        cursor: pointer;
+        @include bgc-overlay(var.$darkblue-color);
+
+        &:hover {
+            @include pulseup;
+        }
+
+        & .text {
+            position: absolute;
+            bottom: 0rem;
+            padding: 2rem;
+            @include imagetext($smaller, $medium);
+        }
+
+
+    }
+
+    & .grid__container__card3 {
+        background-image: url(images/3.jpg);
+        background-size: cover;
+        border-radius: var.$b-radius;
+        position: relative;
+        cursor: pointer;
+        background: linear-gradient(to right, orange, orange);
+
+        &:hover {
+            @include pulseup;
+        }
+
+        & .text {
+            position: absolute;
+            bottom: 0rem;
+            padding: 2rem;
+            @include imagetext($smaller, $medium);
+        }
+    }
+
+    & .grid__container__card4 {
+        background-image: url(images/4.jpg);
+        background-size: cover;
+        border-radius: var.$b-radius;
+        position: relative;
+        cursor: pointer;
+        @include bgc-overlay(var.$DarkOrchid-color);
+
+        &:hover {
+            @include pulseup;
+        }
+
+        & .text {
+            position: absolute;
+            bottom: 0rem;
+            padding: 2rem;
+            @include imagetext($smaller, $medium);
+        }
+    }
+
+    & .grid__container__card5 {
+        background-image: url(images/5.jpg);
+        background-size: cover;
+        border-radius: var.$b-radius;
+        position: relative;
+        cursor: pointer;
+        @include bgc-overlay(var.$purple-color);
+
+        &:hover {
+            @include pulseup;
+        }
+
+        & .text {
+            position: absolute;
+            bottom: 0rem;
+            padding: 2rem;
+            @include imagetext($smaller, $medium);
+        }
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .grid__container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 8rem;
+    }
+
+}
+
+.article__container__1 {
+    padding: var.$padding;
+    border-radius: var.$b-radius;
+    margin: 0 3rem;
+    height: 60vh;
+    background-image: url(../../../images/image1.jpg);
+    background-size: 100%;
+    background-position: center;
+    transition: all 0.3s linear;
+    @include imagetext($medium, $largest);
+    &:hover {
+        background-size: 105%;
+    }
+    .overlay{
+        position: relative;
+        .text{
+            position: relative;
+            top: 4rem;
+            padding: 4rem 0;
+        }
+    }
+}
+.article__container__2{
+    margin-top: 2rem;
+    border-radius: var.$b-radius;
+    height: 70vh;
+    background-image: url(../../../images/7.jpg);
+    background-size: 100%;
+    background-position: center;
+    transition: all 0.3s linear;
+    @include imagetext($medium, $largest);
+    @include bgc-overlay(var.$yellow-color);
+    &:hover {
+        background-size: 105%;
+    }
+    .overlay{
+        position: relative;
+        .text{
+            position: relative;
+            top: 4rem;
+            padding: 2rem;
+            color: black;
+        }
+    }
+}
+.article__container__3{
+    margin-top: 2rem;
+    border-radius: var.$b-radius;
+    height: 70vh;
+    background-image: url(../../../images/8.jpg);
+    background-size: 100%;
+    background-position: center;
+    transition: all 0.3s linear;
+    @include font-text($medium, $largest);
+    &:hover {
+        background-size: 105%;
+    }
+    .overlay{
+        position: relative;
+        .text{
+            position: relative;
+            top: 4rem;
+            padding: 2rem;
+            color: black;
+        }
+    }
+}

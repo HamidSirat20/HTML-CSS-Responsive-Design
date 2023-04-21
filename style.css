@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Niconne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corben&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niconne&family=Source+Sans+Pro:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@900&family=Niconne&family=Source+Sans+Pro:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corben&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@900&family=Niconne&family=Source+Sans+Pro:wght@900&display=swap");
 .header__nav__upper {
   display: flex;
   justify-content: space-between;
@@ -21,7 +25,7 @@
   color: #3B3B3B;
   cursor: pointer;
   display: inline-block;
-  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Corben", cursive;
   font-size: 12px;
   font-weight: 600;
   line-height: normal;
@@ -53,8 +57,7 @@
   box-shadow: none;
   transform: translateY(0);
 }
-
-.header__nav__upper li {
+.header__nav__upper.header__nav__upper li {
   color: rgb(33, 141, 65);
   font-size: larger;
   padding: 1rem;
@@ -62,200 +65,346 @@
 
 .header__nav__lower {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
-  height: 6rem;
+  min-height: 4rem;
   gap: 2rem;
-  margin: 2rem 0;
+}
+.header__nav__lower img {
+  width: 6rem;
+  height: auto;
+}
+.header__nav__lower .link--lists {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.header__nav__lower .link--lists:nth-child(1) a::after {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: rgb(251, 171, 22);
+  position: absolute;
+}
+.header__nav__lower .link--lists li a {
+  color: rgb(240, 235, 235);
+  font-family: "Niconne", cursive;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.header__nav__lower .link--lists li a:hover::after {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: rgb(238, 204, 141);
+  position: absolute;
+}
+.header__nav__lower .link--lists img {
+  width: 2rem;
+  height: auto;
+  cursor: pointer;
 }
 
-.header__nav__lower > li {
-  padding: 16px;
+@media screen and (max-width: 1024px) {
+  .header__nav__lower {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .header__nav__lower .link--lists {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
 }
-
-li:hover {
-  text-decoration: overline;
-  color: blue;
-}
-li:hover a:hover {
-  font-size: 22px;
-}
-
-.header__nav__lower a {
-  color: white;
-  font-size: 18px;
-}
-
-.main__grid {
+.grid__container {
+  padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 200px;
-  gap: 16px;
-  margin: 0 100px;
+  grid-auto-rows: 10rem;
+  gap: 1rem;
 }
-.main__grid .main__grid__img--1 {
+.grid__container .grid__container__card1 {
   background-image: url(images/2.jpg);
   background-size: cover;
   grid-row: span 2;
   grid-column: span 2;
-  border-radius: 16px;
-  cursor: pointer;
+  border-radius: 1rem;
   position: relative;
+  cursor: pointer;
 }
-.main__grid .main__grid__img--1 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 16px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--1 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
-  font-size: 50px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--1:hover {
+.grid__container .grid__container__card1:hover {
   transform: translateY(-4px);
 }
-.main__grid .main__grid__img--2 {
+.grid__container .grid__container__card1 .text {
+  position: absolute;
+  bottom: 0rem;
+  padding: 2rem;
+}
+.grid__container .grid__container__card1 .text .author {
+  font-size: 22px;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.grid__container .grid__container__card1 .text p {
+  font-size: 50px;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.grid__container .grid__container__card2 {
   background-image: url(images/1.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   position: relative;
+  cursor: pointer;
 }
-.main__grid .main__grid__img--2 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 12px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--2 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
-  font-size: 22px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--2 .image--overlay {
+.grid__container .grid__container__card2 .overlay {
   background-color: rgb(16, 47, 228);
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
 }
-.main__grid .main__grid__img--2:hover {
+.grid__container .grid__container__card2:hover {
   transform: translateY(-4px);
 }
-.main__grid .main__grid__img--3 {
+.grid__container .grid__container__card2 .text {
+  position: absolute;
+  bottom: 0rem;
+  padding: 2rem;
+}
+.grid__container .grid__container__card2 .text .author {
+  font-size: 12px;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.grid__container .grid__container__card2 .text p {
+  font-size: 22px;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.grid__container .grid__container__card3 {
   background-image: url(images/3.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   position: relative;
+  cursor: pointer;
+  background: linear-gradient(to right, orange, orange);
 }
-.main__grid .main__grid__img--3 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 12px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--3 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
-  font-size: 22px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--3 .image--overlay {
-  background-color: rgb(255, 180, 105);
-  border-radius: 16px;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-}
-.main__grid .main__grid__img--3:hover {
+.grid__container .grid__container__card3:hover {
   transform: translateY(-4px);
 }
-.main__grid .main__grid__img--4 {
+.grid__container .grid__container__card3 .text {
+  position: absolute;
+  bottom: 0rem;
+  padding: 2rem;
+}
+.grid__container .grid__container__card3 .text .author {
+  font-size: 12px;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.grid__container .grid__container__card3 .text p {
+  font-size: 22px;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.grid__container .grid__container__card4 {
   background-image: url(images/4.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   position: relative;
+  cursor: pointer;
 }
-.main__grid .main__grid__img--4 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 12px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--4 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
-  font-size: 22px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--4 .image--overlay {
+.grid__container .grid__container__card4 .overlay {
   background-color: rgb(134, 39, 154);
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
 }
-.main__grid .main__grid__img--4:hover {
+.grid__container .grid__container__card4:hover {
   transform: translateY(-4px);
 }
-.main__grid .main__grid__img--5 {
+.grid__container .grid__container__card4 .text {
+  position: absolute;
+  bottom: 0rem;
+  padding: 2rem;
+}
+.grid__container .grid__container__card4 .text .author {
+  font-size: 12px;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.grid__container .grid__container__card4 .text p {
+  font-size: 22px;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.grid__container .grid__container__card5 {
   background-image: url(images/5.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   position: relative;
+  cursor: pointer;
 }
-.main__grid .main__grid__img--5 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 12px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--5 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
-  font-size: 22px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.main__grid .main__grid__img--5 .image--overlay {
+.grid__container .grid__container__card5 .overlay {
   background-color: rgb(248, 161, 209);
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
 }
-.main__grid .main__grid__img--5:hover {
+.grid__container .grid__container__card5:hover {
   transform: translateY(-4px);
+}
+.grid__container .grid__container__card5 .text {
+  position: absolute;
+  bottom: 0rem;
+  padding: 2rem;
+}
+.grid__container .grid__container__card5 .text .author {
+  font-size: 12px;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.grid__container .grid__container__card5 .text p {
+  font-size: 22px;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
 }
 
 @media screen and (max-width: 1024px) {
-  .main__grid {
+  .grid__container {
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 150px;
+    grid-auto-rows: 8rem;
   }
 }
+.article__container__1 {
+  padding: 1rem;
+  border-radius: 1rem;
+  margin: 0 3rem;
+  height: 60vh;
+  background-image: url(../../../images/image1.jpg);
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.3s linear;
+}
+.article__container__1 .author {
+  font-size: 22px;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.article__container__1 p {
+  font-size: 50px;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.article__container__1:hover {
+  background-size: 105%;
+}
+.article__container__1 .overlay {
+  position: relative;
+}
+.article__container__1 .overlay .text {
+  position: relative;
+  top: 4rem;
+  padding: 4rem 0;
+}
+
+.article__container__2 {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  height: 70vh;
+  background-image: url(../../../images/7.jpg);
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.3s linear;
+}
+.article__container__2 .author {
+  font-size: 22px;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.article__container__2 p {
+  font-size: 50px;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.article__container__2 .overlay {
+  background-color: rgb(252, 217, 131);
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.article__container__2:hover {
+  background-size: 105%;
+}
+.article__container__2 .overlay {
+  position: relative;
+}
+.article__container__2 .overlay .text {
+  position: relative;
+  top: 4rem;
+  padding: 2rem;
+  color: black;
+}
+
+.article__container__3 {
+  margin-top: 2rem;
+  border-radius: 1rem;
+  height: 70vh;
+  background-image: url(../../../images/8.jpg);
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.3s linear;
+}
+.article__container__3 .author {
+  font-size: 22px;
+  color: rgb(15, 14, 14);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.article__container__3 p {
+  font-size: 50px;
+  color: rgb(46, 43, 43);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.article__container__3:hover {
+  background-size: 105%;
+}
+.article__container__3 .overlay {
+  position: relative;
+}
+.article__container__3 .overlay .text {
+  position: relative;
+  top: 4rem;
+  padding: 2rem;
+  color: black;
+}
+
 .part2 {
   margin: 30px;
   height: 60vh;
@@ -271,7 +420,7 @@ li:hover a:hover {
   background-size: cover;
   grid-row: span 2;
   grid-column: span 2;
-  border-radius: 16px;
+  border-radius: 1rem;
   cursor: pointer;
   position: relative;
   transition: transform 0.2s ease;
@@ -282,7 +431,7 @@ li:hover a:hover {
   bottom: 50%;
   font-size: 22px;
   color: rgb(28, 23, 23);
-  font-family: "Niconne", cursive;
+  font-family: "Corben", cursive;
 }
 .part2 .image--overlay--6 .text {
   position: absolute;
@@ -290,7 +439,7 @@ li:hover a:hover {
   bottom: 35%;
   font-size: 50px;
   color: rgb(42, 26, 26);
-  font-family: "Niconne", cursive;
+  font-family: "Corben", cursive;
 }
 .part2 .image--overlay--6:hover {
   transform: scale(1.03);
@@ -308,7 +457,7 @@ li:hover a:hover {
   width: 85%;
   background-image: url(images/8.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   cursor: pointer;
   position: relative;
 }
@@ -318,7 +467,7 @@ li:hover a:hover {
   bottom: 50%;
   font-size: 22px;
   color: rgb(28, 23, 23);
-  font-family: "Niconne", cursive;
+  font-family: "Corben", cursive;
 }
 .part3 .image--overlay--7 .text {
   position: absolute;
@@ -326,11 +475,11 @@ li:hover a:hover {
   bottom: 35%;
   font-size: 50px;
   color: rgb(42, 26, 26);
-  font-family: "Niconne", cursive;
+  font-family: "Corben", cursive;
 }
 .part3 .image--overlay--7 .image--overlay {
   background-color: rgb(16, 47, 228);
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
@@ -351,7 +500,7 @@ li:hover a:hover {
   background-size: cover;
   grid-row: span 2;
   grid-column: span 2;
-  border-radius: 16px;
+  border-radius: 1rem;
   cursor: pointer;
   position: relative;
   transition: transform 0.2s ease;
@@ -362,7 +511,7 @@ li:hover a:hover {
   bottom: 50%;
   font-size: 22px;
   color: rgb(28, 23, 23);
-  font-family: "Niconne", cursive;
+  font-family: "Corben", cursive;
 }
 .part4 .image--overlay--8 .text {
   position: absolute;
@@ -370,7 +519,7 @@ li:hover a:hover {
   bottom: 35%;
   font-size: 50px;
   color: rgb(42, 26, 26);
-  font-family: "Niconne", cursive;
+  font-family: "Corben", cursive;
 }
 .part4 .image--overlay--8:hover {
   transform: scale(1.03);
@@ -390,30 +539,26 @@ li:hover a:hover {
 .part5 .main__grid__img--9 {
   background-image: url(../../../images/8.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 48%;
   height: 90%;
   position: relative;
 }
 .part5 .main__grid__img--9 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 12px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.part5 .main__grid__img--9 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
   font-size: 22px;
-  color: white;
-  font-family: "Niconne", cursive;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.part5 .main__grid__img--9 p {
+  font-size: 50px;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
 }
 .part5 .main__grid__img--9 .image--overlay {
   background-color: rgb(248, 161, 209);
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
@@ -424,30 +569,26 @@ li:hover a:hover {
 .part5 .main__grid__img--10 {
   background-image: url(images/1.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 48%;
   height: 90%;
   position: relative;
 }
 .part5 .main__grid__img--10 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 12px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.part5 .main__grid__img--10 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
   font-size: 22px;
-  color: white;
-  font-family: "Niconne", cursive;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.part5 .main__grid__img--10 p {
+  font-size: 50px;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
 }
 .part5 .main__grid__img--10 .image--overlay {
   background-color: rgb(255, 180, 105);
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
@@ -470,104 +611,151 @@ li:hover a:hover {
 .part6 .main__grid__img--11 {
   background-image: url(../../../images/8.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 32%;
   height: 90%;
-  position: relative;
-}
-.part6 .main__grid__img--11 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 12px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.part6 .main__grid__img--11 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
-  font-size: 22px;
-  color: white;
-  font-family: "Niconne", cursive;
+  cursor: pointer;
 }
 .part6 .main__grid__img--11 .image--overlay {
   background-color: rgb(248, 161, 209);
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
 }
-.part6 .main__grid__img--11:hover {
-  transform: translateY(-4px);
+.part6 .main__grid__img--11 .image--overlay {
+  position: relative;
+}
+.part6 .main__grid__img--11 .image--overlay .text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.part6 .main__grid__img--11 .image--overlay .text-center .author {
+  font-size: 22px;
+}
+.part6 .main__grid__img--11 .image--overlay .text-center .text {
+  font-size: 50px;
+}
+.part6 .main__grid__img--11 .image--overlay .text-center:hover .continue {
+  display: inline-block;
+}
+.part6 .main__grid__img--11 .image--overlay .text-center .continue {
+  display: none;
 }
 .part6 .main__grid__img--12 {
   background-image: url(images/1.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 32%;
   height: 90%;
-  position: relative;
-}
-.part6 .main__grid__img--12 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 12px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.part6 .main__grid__img--12 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
-  font-size: 22px;
-  color: white;
-  font-family: "Niconne", cursive;
+  cursor: pointer;
 }
 .part6 .main__grid__img--12 .image--overlay {
   background-color: rgb(255, 180, 105);
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
 }
-.part6 .main__grid__img--12:hover {
-  transform: translateY(-4px);
+.part6 .main__grid__img--12 .image--overlay {
+  position: relative;
+}
+.part6 .main__grid__img--12 .image--overlay .text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.part6 .main__grid__img--12 .image--overlay .text-center .author {
+  font-size: 22px;
+}
+.part6 .main__grid__img--12 .image--overlay .text-center .text {
+  font-size: 50px;
+}
+.part6 .main__grid__img--12 .image--overlay .text-center:hover .continue {
+  display: inline-block;
+}
+.part6 .main__grid__img--12 .image--overlay .text-center .continue {
+  display: none;
 }
 .part6 .main__grid__img--13 {
   background-image: url(images/1.jpg);
   background-size: cover;
-  border-radius: 16px;
+  border-radius: 1rem;
   width: 32%;
   height: 90%;
-  position: relative;
-}
-.part6 .main__grid__img--13 .author {
-  position: absolute;
-  left: 40px;
-  bottom: 6rem;
-  font-size: 12px;
-  color: white;
-  font-family: "Niconne", cursive;
-}
-.part6 .main__grid__img--13 .text {
-  position: absolute;
-  left: 40px;
-  bottom: 2rem;
-  font-size: 22px;
-  color: white;
-  font-family: "Niconne", cursive;
+  cursor: pointer;
 }
 .part6 .main__grid__img--13 .image--overlay {
-  background-color: rgb(255, 180, 105);
-  border-radius: 16px;
+  background-color: rgb(134, 39, 154);
+  border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
 }
-.part6 .main__grid__img--13:hover {
-  transform: translateY(-4px);
+.part6 .main__grid__img--13 .image--overlay {
+  position: relative;
+}
+.part6 .main__grid__img--13 .image--overlay .text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.part6 .main__grid__img--13 .image--overlay .text-center .author {
+  font-size: 22px;
+}
+.part6 .main__grid__img--13 .image--overlay .text-center .text {
+  font-size: 50px;
+}
+.part6 .main__grid__img--13 .image--overlay .text-center:hover .continue {
+  display: inline-block;
+}
+.part6 .main__grid__img--13 .image--overlay .text-center .continue {
+  display: none;
+}
+
+.load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  transition: all 0.2s ease;
+}
+.load p {
+  font-family: "Corben", cursive;
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  width: 60%;
+  height: 100%;
+  background-color: rgb(225, 213, 213);
+  border-radius: 1rem;
+}
+.load p:hover {
+  background-color: orange;
+}
+
+.subscribe {
+  margin: 20px 0;
+  height: 60vh;
+  position: relative;
+}
+.subscribe .subscribe__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.subscribe .subscribe__title .author {
+  font-size: 50px;
+}
+.subscribe .subscribe__title .text {
+  font-size: 22px;
 }
 
 * {
@@ -583,7 +771,20 @@ html {
 }
 
 body {
-  background-color: rgb(37, 37, 48);
+  background-color: rgb(70, 70, 76);
+  padding: 6rem;
+}
+
+i {
+  background-color: white;
+}
+
+button {
+  border-radius: 1rem;
+  padding: 0 1rem;
+  background-color: rgb(218, 210, 210);
+  margin: 0.5rem 0 0 0.5rem;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

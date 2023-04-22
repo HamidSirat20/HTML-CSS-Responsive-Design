@@ -3,6 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@900&family=Niconne&family=Source+Sans+Pro:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Corben&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@900&family=Niconne&family=Source+Sans+Pro:wght@900&display=swap");
+.flex-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.flex-center .text {
+  position: relative;
+}
+
 .header__nav__upper {
   display: flex;
   justify-content: space-between;
@@ -148,13 +158,13 @@
   padding: 2rem;
 }
 .grid__container .grid__container__card1 .text .author {
-  font-size: 22px;
+  font-size: 1.3;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.grid__container .grid__container__card1 .text p {
-  font-size: 50px;
+.grid__container .grid__container__card1 .text p, .grid__container .grid__container__card1 .text .preview {
+  font-size: 2rem;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -182,13 +192,13 @@
   padding: 2rem;
 }
 .grid__container .grid__container__card2 .text .author {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.grid__container .grid__container__card2 .text p {
-  font-size: 22px;
+.grid__container .grid__container__card2 .text p, .grid__container .grid__container__card2 .text .preview {
+  font-size: 1.3;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -210,13 +220,13 @@
   padding: 2rem;
 }
 .grid__container .grid__container__card3 .text .author {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.grid__container .grid__container__card3 .text p {
-  font-size: 22px;
+.grid__container .grid__container__card3 .text p, .grid__container .grid__container__card3 .text .preview {
+  font-size: 1.3;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -244,13 +254,13 @@
   padding: 2rem;
 }
 .grid__container .grid__container__card4 .text .author {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.grid__container .grid__container__card4 .text p {
-  font-size: 22px;
+.grid__container .grid__container__card4 .text p, .grid__container .grid__container__card4 .text .preview {
+  font-size: 1.3;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -278,13 +288,13 @@
   padding: 2rem;
 }
 .grid__container .grid__container__card5 .text .author {
-  font-size: 12px;
+  font-size: 0.8rem;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.grid__container .grid__container__card5 .text p {
-  font-size: 22px;
+.grid__container .grid__container__card5 .text p, .grid__container .grid__container__card5 .text .preview {
+  font-size: 1.3;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -307,13 +317,13 @@
   transition: all 0.3s linear;
 }
 .article__container__1 .author {
-  font-size: 22px;
+  font-size: 1.3;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.article__container__1 p {
-  font-size: 50px;
+.article__container__1 p, .article__container__1 .preview {
+  font-size: 2rem;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -340,13 +350,13 @@
   transition: all 0.3s linear;
 }
 .article__container__2 .author {
-  font-size: 22px;
+  font-size: 1.3;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.article__container__2 p {
-  font-size: 50px;
+.article__container__2 p, .article__container__2 .preview {
+  font-size: 2rem;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -381,13 +391,13 @@
   transition: all 0.3s linear;
 }
 .article__container__3 .author {
-  font-size: 22px;
+  font-size: 1.3;
   color: rgb(15, 14, 14);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.article__container__3 p {
-  font-size: 50px;
+.article__container__3 p, .article__container__3 .preview {
+  font-size: 2rem;
   color: rgb(46, 43, 43);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -403,6 +413,225 @@
   top: 4rem;
   padding: 2rem;
   color: black;
+}
+
+.latest {
+  mim-height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.latest .latest__container__1 {
+  margin: 1.5rem;
+  width: 35rem;
+  height: 35rem;
+  background-image: url(../../../images/8.jpg);
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.3s linear;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.latest .latest__container__1 .overlay {
+  background-color: rgb(248, 161, 209);
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.latest .latest__container__1 .author {
+  font-size: 1.3;
+  color: rgb(15, 14, 14);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.latest .latest__container__1 p, .latest .latest__container__1 .preview {
+  font-size: 2rem;
+  color: rgb(46, 43, 43);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.latest .latest__container__1:hover {
+  background-size: 105%;
+}
+.latest .latest__container__1 .overlay .text {
+  padding: 4rem 1rem;
+}
+.latest .latest__container__2 {
+  margin: 1.5rem;
+  width: 35rem;
+  height: 35rem;
+  background-image: url(../../../images/8.jpg);
+  background-size: 100%;
+  background-position: center;
+  border-radius: 1rem;
+  transition: all 0.3s linear;
+}
+.latest .latest__container__2 .overlay {
+  background-color: rgb(252, 217, 131);
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.latest .latest__container__2 .author {
+  font-size: 1.3;
+  color: rgb(15, 14, 14);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.latest .latest__container__2 p, .latest .latest__container__2 .preview {
+  font-size: 2rem;
+  color: rgb(46, 43, 43);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.latest .latest__container__2:hover {
+  background-size: 105%;
+}
+.latest .latest__container__2 .overlay {
+  position: relative;
+}
+.latest .latest__container__2 .overlay .text {
+  padding: 25% 2rem;
+}
+.latest .latest__container__2 .overlay .btn {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+}
+
+@media screen and (max-width: 1024px) {
+  .latest {
+    flex-direction: column;
+  }
+}
+.more {
+  height: 70vh;
+  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 30rem;
+  gap: 1rem;
+}
+.more .more__container__1 {
+  background-image: url(../../../images/1.jpg);
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.3s linear;
+}
+.more .more__container__1 .author {
+  font-size: 1.3;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.more .more__container__1 p, .more .more__container__1 .preview {
+  font-size: 2rem;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.more .more__container__1:hover {
+  background-size: 105%;
+}
+.more .more__container__1 .overlay {
+  position: absolute;
+  padding: 20% 1rem;
+}
+.more .more__container__2 {
+  background-image: url(../../../images/image1.jpg);
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.3s linear;
+}
+.more .more__container__2 .author {
+  font-size: 1.3;
+  color: rgb(15, 14, 14);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.more .more__container__2 p, .more .more__container__2 .preview {
+  font-size: 2rem;
+  color: rgb(46, 43, 43);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.more .more__container__2 .overlay {
+  background-color: rgb(248, 161, 209);
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+.more .more__container__2:hover {
+  background-size: 105%;
+}
+.more .more__container__2 .overlay {
+  position: absolute;
+  padding: 20% 1rem;
+}
+.more .more__container__3 {
+  background-image: url(../../../images/1.jpg);
+  border-radius: 1rem;
+  position: relative;
+  cursor: pointer;
+  background-size: 100%;
+  background-position: center;
+  transition: all 0.3s linear;
+}
+.more .more__container__3 .author {
+  font-size: 1.3;
+  color: rgb(254, 254, 254);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+}
+.more .more__container__3 p, .more .more__container__3 .preview {
+  font-size: 2rem;
+  color: rgb(242, 237, 237);
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.more .more__container__3:hover {
+  background-size: 105%;
+}
+.more .more__container__3 .overlay {
+  position: absolute;
+  padding: 20% 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .more {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 30rem;
+  }
+}
+.load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+}
+.load p {
+  font-family: "Corben", cursive;
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  width: 60%;
+  height: 100%;
+  background-color: rgb(225, 213, 213);
+  border-radius: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.load p:hover {
+  background-color: orange;
 }
 
 .part2 {
@@ -429,7 +658,7 @@
   position: absolute;
   left: 25%;
   bottom: 50%;
-  font-size: 22px;
+  font-size: 1.3;
   color: rgb(28, 23, 23);
   font-family: "Corben", cursive;
 }
@@ -437,7 +666,7 @@
   position: absolute;
   left: 25%;
   bottom: 35%;
-  font-size: 50px;
+  font-size: 2rem;
   color: rgb(42, 26, 26);
   font-family: "Corben", cursive;
 }
@@ -465,7 +694,7 @@
   position: absolute;
   left: 25%;
   bottom: 50%;
-  font-size: 22px;
+  font-size: 1.3;
   color: rgb(28, 23, 23);
   font-family: "Corben", cursive;
 }
@@ -473,7 +702,7 @@
   position: absolute;
   left: 25%;
   bottom: 35%;
-  font-size: 50px;
+  font-size: 2rem;
   color: rgb(42, 26, 26);
   font-family: "Corben", cursive;
 }
@@ -509,7 +738,7 @@
   position: absolute;
   left: 25%;
   bottom: 50%;
-  font-size: 22px;
+  font-size: 1.3;
   color: rgb(28, 23, 23);
   font-family: "Corben", cursive;
 }
@@ -517,7 +746,7 @@
   position: absolute;
   left: 25%;
   bottom: 35%;
-  font-size: 50px;
+  font-size: 2rem;
   color: rgb(42, 26, 26);
   font-family: "Corben", cursive;
 }
@@ -545,13 +774,13 @@
   position: relative;
 }
 .part5 .main__grid__img--9 .author {
-  font-size: 22px;
+  font-size: 1.3;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.part5 .main__grid__img--9 p {
-  font-size: 50px;
+.part5 .main__grid__img--9 p, .part5 .main__grid__img--9 .preview {
+  font-size: 2rem;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -575,13 +804,13 @@
   position: relative;
 }
 .part5 .main__grid__img--10 .author {
-  font-size: 22px;
+  font-size: 1.3;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.part5 .main__grid__img--10 p {
-  font-size: 50px;
+.part5 .main__grid__img--10 p, .part5 .main__grid__img--10 .preview {
+  font-size: 2rem;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
@@ -633,10 +862,10 @@
   transform: translate(-50%, -50%);
 }
 .part6 .main__grid__img--11 .image--overlay .text-center .author {
-  font-size: 22px;
+  font-size: 1.3;
 }
 .part6 .main__grid__img--11 .image--overlay .text-center .text {
-  font-size: 50px;
+  font-size: 2rem;
 }
 .part6 .main__grid__img--11 .image--overlay .text-center:hover .continue {
   display: inline-block;
@@ -669,10 +898,10 @@
   transform: translate(-50%, -50%);
 }
 .part6 .main__grid__img--12 .image--overlay .text-center .author {
-  font-size: 22px;
+  font-size: 1.3;
 }
 .part6 .main__grid__img--12 .image--overlay .text-center .text {
-  font-size: 50px;
+  font-size: 2rem;
 }
 .part6 .main__grid__img--12 .image--overlay .text-center:hover .continue {
   display: inline-block;
@@ -705,10 +934,10 @@
   transform: translate(-50%, -50%);
 }
 .part6 .main__grid__img--13 .image--overlay .text-center .author {
-  font-size: 22px;
+  font-size: 1.3;
 }
 .part6 .main__grid__img--13 .image--overlay .text-center .text {
-  font-size: 50px;
+  font-size: 2rem;
 }
 .part6 .main__grid__img--13 .image--overlay .text-center:hover .continue {
   display: inline-block;
@@ -739,23 +968,127 @@
   background-color: orange;
 }
 
-.subscribe {
-  margin: 20px 0;
-  height: 60vh;
-  position: relative;
+.form {
+  color: rgb(240, 235, 235);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.subscribe .subscribe__title {
+.form form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+}
+.form form p {
+  width: fit-content;
+  font-size: larger;
+  white-space: nowrap;
+  border-right: 3px solid white;
+  overflow: hidden;
+  animation: typewriter 5s steps(28) infinite alternate, blink 3s ease-in-out alternate;
+}
+.form form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  transition: all 0.5s linear;
+  width: 80%;
+  text-align: center;
+}
+.form form input:focus {
+  outline: none;
+  width: 100%;
+}
+.form form button {
+  font-family: "Corben", cursive;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  padding: 1rem;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(225, 213, 213);
+  border-radius: 1rem;
+  transition: all 0.5s linear;
+}
+.form form button:hover {
+  background-color: rgb(15, 224, 60);
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  0% {
+    border-right: 3px solid white;
+  }
+  25% {
+    border-right: none;
+  }
+  50% {
+    border-right: 3px solid white;
+  }
+  75% {
+    border-right: none;
+  }
+  100% {
+    border-right: 3px solid white;
+  }
+}
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  gap: 2rem;
+}
+.footer__nav .footer__nav__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer__nav .footer__nav__links .lists {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 4rem;
+  gap: 2rem;
+}
+.footer__nav .footer__nav__links .lists li a:hover::after {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: rgb(238, 204, 141);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+.footer__nav .footer__nav__links .lists li a {
   color: white;
 }
-.subscribe .subscribe__title .author {
-  font-size: 50px;
+.footer__nav .footer__nav__links .lists li img {
+  width: 2rem;
+  height: auto;
+  cursor: pointer;
 }
-.subscribe .subscribe__title .text {
-  font-size: 22px;
+.footer__nav .footer__nav__media {
+  cursor: pointer;
+}
+.footer__nav .footer__nav__media i {
+  margin: 0 0.5rem;
+}
+.footer__nav .footer__nav__media i:hover {
+  background-color: rgb(212, 163, 72);
 }
 
 * {

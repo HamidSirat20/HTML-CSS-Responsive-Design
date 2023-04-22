@@ -222,13 +222,3 @@
     }
 
 }
-
-.subscribe{
-    margin: 20px 0;
-    height: 60vh;
-    position: relative;
-    .subscribe__title{
-        @include txt-center($largest,$medium);
-        color: white;
-    }
-}

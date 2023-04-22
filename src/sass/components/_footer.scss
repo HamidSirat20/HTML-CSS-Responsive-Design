@@ -1,0 +1,149 @@
+@use 'variables' as var;
+@use 'mixin' as *;
+@use 'fonts' as *;
+
+.form {
+    color: var.$text-light;
+    @include flex-center;
+    flex-direction: column;
+
+    form {
+        @include flex-center;
+        flex-direction: column;
+        font-size: $largest;
+
+        p {
+            width: fit-content;
+            font-size: larger;
+            white-space: nowrap;
+            border-right: 3px solid white;
+            overflow: hidden;
+            animation: typewriter 5s steps(28) infinite alternate, blink 3s ease-in-out alternate;
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            transition: all 0.5s linear;
+            width: 80%;
+            text-align: center;
+
+            &:focus {
+                outline: none;
+                width: 100%;
+            }
+        }
+
+        button {
+            font-family: 'Corben', cursive;
+            font-weight: 700;
+            cursor: pointer;
+            text-align: center;
+            padding: 1rem;
+            width: 30%;
+            height: 100%;
+            background-color: rgb(225, 213, 213);
+            border-radius: var.$b-radius;
+            transition: all 0.5s linear;
+
+            &:hover {
+                background-color: rgb(15, 224, 60);
+            }
+
+        }
+
+    }
+}
+
+@keyframes typewriter {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border-right: 3px solid white;
+    }
+
+    25% {
+        border-right: none;
+    }
+
+    50% {
+        border-right: 3px solid white;
+    }
+
+    75% {
+        border-right: none;
+    }
+
+    100% {
+        border-right: 3px solid white;
+    }
+}
+
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 4rem;
+    gap: 2rem;
+
+    .footer__nav__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 4rem;
+        flex-direction: column;
+        gap: 2rem;
+
+        .lists {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 4rem;
+            gap: 2rem;
+
+            li {
+                a:hover::after {
+                    content: "";
+                    width: 0.4rem;
+                    height: 0.4rem;
+                    border-radius: 50%;
+                    background-color: rgb(238, 204, 141);
+                    position: absolute;
+                }
+
+                a {
+                    color: white;
+                }
+
+                img {
+                    width: 2rem;
+                    height: auto;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .footer__nav__media {
+        cursor: pointer;
+        i {
+
+            margin: 0 0.5rem;
+
+            &:hover {
+                background-color: rgb(212, 163, 72);
+            }
+        }
+    }
+
+}

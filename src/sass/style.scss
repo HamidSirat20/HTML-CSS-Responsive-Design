@@ -1,6 +1,5 @@
 @use 'components/nav.scss';
 @use 'components/main.scss';
-@use 'components/body.scss';
 @use 'components/variables' as var;
 @use 'components/footer.scss';
 
@@ -30,4 +29,7 @@ button{
     background-color: rgb(218, 210, 210);
     margin: 0.5rem 0 0 0.5rem;
     cursor: pointer;
+}
+i{
+    color:var.$text-light;
 }

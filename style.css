@@ -306,7 +306,7 @@
     grid-auto-rows: 8rem;
   }
 }
-.article__container__1 {
+.article .article__container__1 {
   padding: 1rem;
   border-radius: 1rem;
   margin: 0 3rem;
@@ -317,40 +317,43 @@
   transition: all 0.3s linear;
   cursor: pointer;
 }
-.article__container__1 .author {
+.article .article__container__1 .author {
   font-size: 1.3;
   color: rgb(254, 254, 254);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.article__container__1 p, .article__container__1 .preview {
+.article .article__container__1 p, .article .article__container__1 .preview {
   font-size: 2rem;
   color: rgb(242, 237, 237);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
 }
-.article__container__1:hover {
+.article .article__container__1:hover {
   background-size: 105%;
 }
-.article__container__1 .overlay {
-  position: relative;
+.article .article__container__1 .overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0 4em;
 }
-.article__container__1 .overlay .text {
+.article .article__container__1 .overlay .text {
   position: relative;
   top: 4rem;
   padding: 4rem 0;
 }
-.article__container__1 .overlay .text p {
+.article .article__container__1 .overlay .text p {
   display: inline;
 }
-.article__container__1 .overlay .text:hover .continue {
+.article .article__container__1 .overlay .text:hover .continue {
   display: inline-block;
 }
-.article__container__1 .overlay .text .continue {
+.article .article__container__1 .overlay .text .continue {
   display: none;
 }
-
-.article__container__2 {
+.article .article__container__2 {
   margin-top: 2rem;
   border-radius: 1rem;
   height: 70vh;
@@ -360,93 +363,91 @@
   transition: all 0.3s linear;
   cursor: pointer;
 }
-.article__container__2 .author {
+.article .article__container__2 .author {
   font-size: 1.3;
-  color: rgb(254, 254, 254);
+  color: rgb(15, 14, 14);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.article__container__2 p, .article__container__2 .preview {
+.article .article__container__2 p, .article .article__container__2 .preview {
   font-size: 2rem;
-  color: rgb(242, 237, 237);
+  color: rgb(46, 43, 43);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
 }
-.article__container__2 .overlay {
+.article .article__container__2 .overlay {
   background-color: rgb(252, 217, 131);
   border-radius: 1rem;
   width: 100%;
   height: 100%;
   opacity: 0.8;
 }
-.article__container__2:hover {
+.article .article__container__2:hover {
   background-size: 105%;
 }
-.article__container__2 .overlay {
-  position: relative;
+.article .article__container__2 .overlay {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4rem;
 }
-.article__container__2 .overlay .text {
-  position: relative;
-  top: 4rem;
-  padding: 2rem;
+.article .article__container__2 .overlay .text {
   color: black;
 }
-.article__container__2 .overlay .text .preview {
+.article .article__container__2 .overlay .text .preview {
   display: inline;
 }
-.article__container__2 .overlay .text:hover .continue {
+.article .article__container__2 .overlay .text:hover .continue {
   display: inline-block;
 }
-.article__container__2 .overlay .text .continue {
+.article .article__container__2 .overlay .text .continue {
   display: none;
 }
-
-.article__container__3 {
+.article .article__container__3 {
   margin-top: 2rem;
   border-radius: 1rem;
   height: 70vh;
-  background-image: url(../../../images/8.jpg);
+  background-image: url(../../../images/7.jpg);
   background-size: 100%;
   background-position: center;
   transition: all 0.3s linear;
   cursor: pointer;
 }
-.article__container__3 .author {
+.article .article__container__3 .author {
   font-size: 1.3;
   color: rgb(15, 14, 14);
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
 }
-.article__container__3 p, .article__container__3 .preview {
+.article .article__container__3 p, .article .article__container__3 .preview {
   font-size: 2rem;
   color: rgb(46, 43, 43);
   font-family: "Times New Roman", Times, serif;
   font-weight: 700;
 }
-.article__container__3:hover {
+.article .article__container__3:hover {
   background-size: 105%;
 }
-.article__container__3 .overlay {
-  position: relative;
+.article .article__container__3 .overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4rem;
 }
-.article__container__3 .overlay .text {
-  position: relative;
-  top: 4rem;
-  padding: 2rem;
-  color: black;
-}
-.article__container__3 .overlay .text p {
+.article .article__container__3 .overlay .text p {
   display: inline;
 }
-.article__container__3 .overlay .text:hover .continue {
+.article .article__container__3 .overlay .text:hover .continue {
   display: inline-block;
 }
-.article__container__3 .overlay .text .continue {
+.article .article__container__3 .overlay .text .continue {
   display: none;
 }
 
 .latest {
-  mim-height: 60vh;
+  min-height: 60vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -483,6 +484,13 @@
 }
 .latest .latest__container__1:hover {
   background-size: 105%;
+}
+.latest .latest__container__1 .overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4rem;
 }
 .latest .latest__container__1 .overlay .text {
   padding: 4rem 1rem;
@@ -530,7 +538,11 @@
   background-size: 105%;
 }
 .latest .latest__container__2 .overlay {
-  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4rem;
 }
 .latest .latest__container__2 .overlay .text {
   padding: 25% 2rem;
@@ -543,11 +555,6 @@
 }
 .latest .latest__container__2 .overlay .text .continue {
   display: none;
-}
-.latest .latest__container__2 .overlay .btn {
-  position: absolute;
-  top: 15%;
-  left: 8%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -588,8 +595,11 @@
   background-size: 105%;
 }
 .more .more__container__1 .overlay {
-  position: absolute;
-  padding: 20% 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4rem;
 }
 .more .more__container__1 .overlay .text h3 {
   display: inline;
@@ -632,8 +642,11 @@
   background-size: 105%;
 }
 .more .more__container__2 .overlay {
-  position: absolute;
-  padding: 20% 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4rem;
 }
 .more .more__container__2 .overlay .text h3 {
   display: inline;
@@ -669,8 +682,11 @@
   background-size: 105%;
 }
 .more .more__container__3 .overlay {
-  position: absolute;
-  padding: 20% 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 4rem;
 }
 .more .more__container__3 .overlay .text h3 {
   display: inline;
@@ -710,21 +726,24 @@
   background-color: orange;
 }
 
-.form {
+footer {
+  height: 100vh;
+}
+footer .form {
   color: rgb(240, 235, 235);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.form form {
+footer .form form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-size: 2rem;
 }
-.form form p {
+footer .form form p {
   width: fit-content;
   font-size: larger;
   white-space: nowrap;
@@ -732,7 +751,7 @@
   overflow: hidden;
   animation: typewriter 5s steps(28) infinite alternate, blink 3s ease-in-out alternate;
 }
-.form form input {
+footer .form form input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid white;
@@ -740,11 +759,11 @@
   width: 80%;
   text-align: center;
 }
-.form form input:focus {
+footer .form form input:focus {
   outline: none;
   width: 100%;
 }
-.form form button {
+footer .form form button {
   font-family: "Corben", cursive;
   font-weight: 700;
   cursor: pointer;
@@ -756,7 +775,7 @@
   border-radius: 1rem;
   transition: all 0.5s linear;
 }
-.form form button:hover {
+footer .form form button:hover {
   background-color: rgb(15, 224, 60);
 }
 
@@ -823,10 +842,22 @@
   height: auto;
   cursor: pointer;
 }
+@media screen and (max-width: 1024px) {
+  .footer__nav .footer__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-height: 4rem;
+    gap: 2rem;
+  }
+}
 .footer__nav .footer__nav__media {
   cursor: pointer;
 }
 .footer__nav .footer__nav__media i {
+  background-color: black;
+  font-size: large;
   margin: 0 0.5rem;
 }
 .footer__nav .footer__nav__media i:hover {

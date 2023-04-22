@@ -121,6 +121,8 @@
 
 }
 
+.article{
+
 .article__container__1 {
     padding: var.$padding;
     border-radius: var.$b-radius;
@@ -138,9 +140,13 @@
     }
 
     .overlay {
-        position: relative;
-
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+        flex-direction: column;
+        padding: 0 4em;
         .text {
+
             p {
                 display: inline;
             }
@@ -168,7 +174,7 @@
     background-size: 100%;
     background-position: center;
     transition: all 0.3s linear;
-    @include imagetext($medium, $largest);
+    @include font-text($medium, $largest);
     @include bgc-overlay(var.$yellow-color);
     cursor: pointer;
 
@@ -177,8 +183,11 @@
     }
 
     .overlay {
-        position: relative;
-
+        display: flex;
+        justify-content: space-around;
+        align-items:flex-start;
+        flex-direction: column;
+        padding: 4rem;
         .text {
             .preview {
                 display: inline;
@@ -191,10 +200,6 @@
             .continue {
                 display: none;
             }
-
-            position: relative;
-            top: 4rem;
-            padding: 2rem;
             color: black;
         }
     }
@@ -204,7 +209,7 @@
     margin-top: 2rem;
     border-radius: var.$b-radius;
     height: 70vh;
-    background-image: url(../../../images/8.jpg);
+    background-image: url(../../../images/7.jpg);
     background-size: 100%;
     background-position: center;
     transition: all 0.3s linear;
@@ -216,8 +221,11 @@
     }
 
     .overlay {
-        position: relative;
-
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-start;
+        flex-direction:column;
+        padding: 4rem;
         .text {
             p {
                 display: inline;
@@ -230,17 +238,14 @@
             .continue {
                 display: none;
             }
-
-            position: relative;
-            top: 4rem;
-            padding: 2rem;
-            color: black;
         }
     }
 }
 
+}
+
 .latest {
-    mim-height: 60vh;
+    min-height: 60vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -262,7 +267,14 @@
             background-size: 105%;
         }
 
-        .overlay .text {
+        .overlay {
+            display: flex;
+            justify-content: space-between;
+            align-items:flex-start;
+            flex-direction:column;
+            padding: 4rem;
+            
+            .text {
             padding: 4rem 1rem;
 
             h3 {
@@ -277,6 +289,7 @@
                 display: none;
             }
         }
+    }
 
     }
 
@@ -298,7 +311,11 @@
         }
 
         .overlay {
-            position: relative;
+            display: flex;
+            justify-content: space-around;
+            align-items:flex-start;
+            flex-direction:column;
+            padding: 4rem;
 
             .text {
                 padding: 25% 2rem;
@@ -314,13 +331,6 @@
                 .continue {
                     display: none;
                 }
-            }
-
-            .btn {
-                position: absolute;
-                top: 15%;
-                left: 8%;
-
             }
 
         }
@@ -361,8 +371,11 @@
         }
 
         & .overlay {
-            position: absolute;
-            padding: 20% 1rem;
+            display: flex;
+            justify-content: space-around;
+            align-items:flex-start;
+            flex-direction:column;
+            padding: 4rem;
 
             .text {
                 h3 {
@@ -396,9 +409,11 @@
         }
 
         & .overlay {
-            position: absolute;
-            padding: 20% 1rem;
-            
+            display: flex;
+            justify-content: space-around;
+            align-items:flex-start;
+            flex-direction:column;
+            padding: 4rem;
             .text {
                 h3 {
                     display: inline;
@@ -431,9 +446,11 @@
         }
 
         & .overlay {
-            position: absolute;
-            padding: 20% 2rem;
-
+            display: flex;
+            justify-content: space-around;
+            align-items:flex-start;
+            flex-direction:column;
+            padding: 4rem;
             .text {
                 h3 {
                     display: inline;
